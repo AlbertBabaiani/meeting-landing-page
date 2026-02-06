@@ -37,14 +37,6 @@ header {
   padding-top: 4.8rem;
 }
 
-h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 1.1;
-
-  margin-block: 5rem 2.4rem;
-}
-
 // Utilities Start
 .btn-primary {
   padding: 1.6rem 4rem;
@@ -59,8 +51,19 @@ h1 {
   line-height: 1.63;
   color: var(--white);
 
+  transition: background 0.2s;
+
   span {
     color: var(--secondary-hover);
+    transition: color 0.2s;
+  }
+
+  &:hover {
+    background: var(--secondary-hover);
+
+    span {
+      color: var(--secondary);
+    }
   }
 }
 
@@ -102,15 +105,30 @@ h1 {
 
   margin-bottom: 6.4rem;
 
+  position: relative;
+
   p {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.63;
     color: var(--gray);
   }
+
+  img {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+
+  margin-bottom: 2.4rem;
 }
 
 .hero-wrapper {
+  margin-top: 5rem;
   padding-inline: var(--px);
 }
 
@@ -119,6 +137,14 @@ h1 {
 
   span {
     color: var(--primary-hover);
+  }
+
+  &:hover {
+    background: var(--primary-hover);
+
+    span {
+      color: var(--primary);
+    }
   }
 }
 
@@ -194,6 +220,7 @@ h1 {
   line-height: 1.63;
   letter-spacing: 3px;
   color: var(--primary);
+  text-transform: uppercase;
 }
 
 // Description Section End
@@ -208,7 +235,7 @@ footer {
 
   padding: 9.2rem var(--px) 7.2rem;
 
-  background:
+  background-image:
     linear-gradient(rgba(87, 145, 164, 0.85), rgba(87, 145, 164, 0.85)),
     url(./assets/mobile/image-footer.jpg);
 
@@ -244,3 +271,209 @@ footer {
 }
 
 // Footer End
+
+// Tablet View
+@media (min-width: 700px) {
+  :root {
+    --px: 3.9rem;
+  }
+
+  // Hero Start
+
+  h1 {
+    font-size: 4.8rem;
+    max-width: 34rem;
+    line-height: 1;
+  }
+
+  .hero {
+    margin-bottom: 8rem;
+
+    p {
+      max-width: 45.7rem;
+    }
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+  }
+
+  .hero-img-wrapper {
+    margin-top: 8rem;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+  }
+
+  // Hero End
+
+  // ShowCase Start
+  .image-showcase {
+    margin-bottom: 4.8rem;
+  }
+
+  .showcase-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+    margin-top: 6.7rem;
+  }
+
+  // ShowCase End
+
+  // Description Section Start
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-top: 1.6rem;
+
+      max-width: 44.5rem;
+    }
+
+    p:not(.sub-heading) {
+      max-width: 57.3rem;
+    }
+  }
+
+  .sub-heading {
+    font-size: 1.6rem;
+    line-height: 1.63;
+    letter-spacing: 4px;
+  }
+
+  // Description Section End
+
+  // Footer Start
+
+  footer {
+    background-image:
+      linear-gradient(rgba(87, 145, 164, 0.85), rgba(87, 145, 164, 0.85)),
+      url(./assets/tablet/image-footer.jpg);
+
+    margin-top: 19.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 4rem;
+      line-height: 1.1;
+
+      max-width: 45rem;
+      margin-bottom: 3.2rem;
+    }
+
+    p {
+      max-width: 57.3rem;
+    }
+  }
+
+  // Footer End
+}
+
+// Desktop View
+
+@media (min-width: 1280px) {
+  :root {
+    --px: 16.5rem;
+  }
+
+  header {
+    padding-top: 8rem;
+  }
+
+  // Hero Start
+
+  h1 {
+    font-size: 6.4rem;
+    line-height: 1;
+    max-width: 44.5rem;
+
+    margin-bottom: 3.4rem;
+  }
+
+  .hero {
+    margin-bottom: 11.7rem;
+
+    background-image:
+      url(./assets/desktop/image-hero-left.png),
+      url(./assets/desktop/image-hero-right.png);
+
+    background-repeat: no-repeat;
+    background-position:
+      center left -3rem,
+      center right -3rem;
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.44;
+    }
+  }
+
+  .hero-wrapper {
+    margin-top: 10.8rem;
+  }
+
+  .hero-img-wrapper {
+    display: none;
+  }
+
+  // Hero End
+
+  // Showcase Start
+
+  .image-showcase {
+    margin-bottom: 8rem;
+  }
+
+  .showcase-wrapper {
+    gap: 3rem;
+  }
+
+  // Showcase End
+
+  // Description Section Start
+
+  .description {
+    p:not(.sub-heading) {
+      max-width: 54rem;
+      font-size: 1.8rem;
+      line-height: 1.44;
+    }
+  }
+
+  // Description Section End
+
+  // Footer Start
+
+  footer {
+    background-image:
+      linear-gradient(rgba(87, 145, 164, 0.85), rgba(87, 145, 164, 0.85)),
+      url(./assets/desktop/image-footer.jpg);
+
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+
+    padding-block: 11.6rem;
+
+    h2,
+    p {
+      max-width: 35rem;
+      margin: 0;
+    }
+  }
+
+  // Footer End
+}
