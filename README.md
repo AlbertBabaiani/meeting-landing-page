@@ -10,7 +10,7 @@
   <br />
   <br />
 
-  <a href="YOUR_LIVE_SITE_URL_HERE">
+  <a href="https://albertbabaiani.github.io/meeting-landing-page/">
     <img src="https://img.shields.io/badge/View_Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="View Live Demo" />
   </a>
   
